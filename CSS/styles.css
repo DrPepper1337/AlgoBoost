@@ -1,0 +1,59 @@
+.navbar {
+    top: 7vh;
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+
+.navbarLink {
+    margin: 1%;
+    color: #ffbf75;
+    /*text-shadow: 1px 1px 10px #fff, 1px 1px 10px #ccc;*/
+    text-decoration: none;
+    font-size: 200%;
+}
+
+.navbarLink:hover {
+    color: white;
+}
+
+header {
+    top: 0;
+    width: 100%;
+    position: sticky;
+    overflow: auto;
+}
+
+body {
+    background-color: black;
+    font-family: "Space Mono", monospace;
+    margin: 0;
+}
+
+.logo {
+    float: left;
+    margin: 4px;
+    height: 100%;
+    width: 10%;
+    pointer-events: none;
+}
+
+.background {
+    z-index: -1;
+}
+
+.listingsOfCode {
+    color: white;
+    font-family: 'JetBrains Mono', serif;
+    display: inline-block;
+    animation: marquee 10s linear infinite;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(-150%);
+    }
+    100% {
+        transform: translateX(+150%);
+    }
+}
