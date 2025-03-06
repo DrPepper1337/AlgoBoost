@@ -45,8 +45,11 @@ body {
 .listingsOfCode {
     color: white;
     font-family: 'JetBrains Mono', serif;
-    display: inline-block;
-    animation: marquee 10s linear infinite;
+    /*animation: marquee 10s linear infinite;*/
+    overflow: hidden;
+    font-size: 5vh;
+    margin: 0;
+    white-space: nowrap;
 }
 
 @keyframes marquee {
