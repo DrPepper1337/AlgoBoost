@@ -1,13 +1,26 @@
 .navbar {
-    top: 7vh;
-    position: relative;
+    user-select: none;
+    top: 3vh;
+    position: absolute;
     text-align: center;
     width: 100%;
 }
 
+.maintext {
+    color: #f89d30;
+    font-size: 700%;
+    z-index: 5;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-family: "Audiowide", sans-serif;
+    transform: translate(-50%, -50%);
+}
+
 .navbarLink {
-    margin: 1%;
-    color: #ffbf75;
+    margin: 1vw;
+    color: #bb7237;
     /*text-shadow: 1px 1px 10px #fff, 1px 1px 10px #ccc;*/
     text-decoration: none;
     font-size: 200%;
@@ -28,35 +41,106 @@ body {
     background-color: black;
     font-family: "Space Mono", monospace;
     margin: 0;
+    overflow: hidden;
 }
 
 .logo {
-    float: left;
+    float: right;
     margin: 4px;
-    height: 100%;
-    width: 10%;
+    height: 10vh;
     pointer-events: none;
 }
 
-.background {
-    z-index: -1;
+#mainlogo {
+    position: absolute;
+    z-index: 2;
+    float: left;
+    align-content: center;
+}
+
+#background {
+    z-index: 1;
+    overflow: hidden;
+    position: relative;
 }
 
 .listingsOfCode {
     color: white;
     font-family: 'JetBrains Mono', serif;
-    /*animation: marquee 10s linear infinite;*/
-    overflow: hidden;
-    font-size: 5vh;
+    user-select: none;
+    animation-fill-mode: backwards;
+    font-size: 3vh;
     margin: 0;
     white-space: nowrap;
 }
 
-@keyframes marquee {
+.forward {
+    width: 100%;
+    overflow: hidden;
+    display: inline-block;
+    animation: forward 120s linear infinite;
+}
+
+.backwards {
+    width: 100%;
+    overflow: hidden;
+    display: inline-block;
+    animation: backward 120s linear infinite;
+}
+
+.forward-delay {
+    width: 100%;
+    overflow: hidden;
+    display: inline-block;
+    animation: forward1 120s linear infinite;
+    animation-delay: -60s;
+}
+
+.backwards-delay {
+    width: 100%;
+    overflow: hidden;
+    display: inline-block;
+    animation: backward1 120s linear infinite;
+    animation-delay: -60s;
+}
+
+.border-line {
+    border: 1px solid white;
+    width: 100%;
+}
+
+@keyframes forward {
     0% {
-        transform: translateX(-150%);
+        transform: translateX(-100%);
     }
     100% {
-        transform: translateX(+150%);
+        transform: translateX(100%);
+    }
+}
+
+@keyframes backward {
+    0% {
+        transform: translateX(+100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes forward1 {
+    0% {
+        transform: translateX(-200%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes backward1 {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-200%);
     }
 }
